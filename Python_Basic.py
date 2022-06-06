@@ -7,8 +7,23 @@ class student:
         print("My name is %s and age is %d"%(self.name,self.age))
     
     def depart(self):
-        print("Belongs to the Department %s"%(self.dept))
+        print("Belongs to the %s Department "%(self.dept))
 
-std = student("gowtham",89,"IT")
+class Department(student):
+    def __init__(self, name, age, dept,add) -> None:
+        super().__init__(name, age, dept)
+
+        self.add = add
+
+    def Address(self):
+        print("And home address is %s"%(self.add))
+
+    
+
+
+#std = student("gowtham",89,"IT")
+
+std = Department("harsha",8932391,"Mechanical","Main road,Appanapalli")
 std.details()
 std.depart()
+std.Address()
